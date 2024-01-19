@@ -1,0 +1,15 @@
+<div id="board">
+    <div class="card" *ngIf="gameState.currentPlayState.gameOver">
+        <div class="card-header">
+            Game Over
+        </div>
+        <div class="card-body" *ngIf="gameState.currentPlayState.winner != ''">
+            The winner is {{gameState.currentPlayState.winner}}
+        </div>
+    </div>
+    <div *ngFor="let i of [0,1,2]" class="d-flex flex-column">
+        <div class="d-flex flex-row">
+            <app-square [i] = "i" [j] = "j" *ngFor="let j of [0,1,2]"></app-square>
+        </div>
+    </div>
+</div>

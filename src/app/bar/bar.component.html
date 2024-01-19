@@ -1,0 +1,22 @@
+<nav class="nav">
+    <ul class="nav nav-pills p-3">
+        <li>
+            <button 
+            class="btn"
+            [ngClass]="gameState.currentPlayState.currentPlayer == 'Player 1' ? 'btn-success':'btn-outline-success'"
+            >Player 1</button>
+        </li>
+        <li>
+            <button 
+            class="btn"
+            [ngClass]="gameState.currentPlayState.currentPlayer == 'Player 2' ? 'btn-primary':'btn-outline-primary'"
+            >Player 2</button>
+        </li>
+        <li>
+            <button 
+            class="btn btn-danger"
+            (click)="resetGame()"
+            >Reset</button>
+        </li>
+    </ul>
+</nav>
